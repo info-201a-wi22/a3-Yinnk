@@ -1,0 +1,32 @@
+---
+title: "How Incarceration rate Differ Among Races"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+There are debates about race and policing in the U.S. which include questions about **equality and biases in jurisdictional processes**. This dataset contains incarceration information in the U.S. from 1970 to 2018 and has statistics by race that can be used to analyze the equality of jurisdictional treatment. I will focus on analyzing data from the _nearest 10 years, 2006 to 2016_, to see if the situation matches some people's perception that **equality has been achieved by changes over years**.
+
+For the five variables I calculated, I mainly focused on _comparing incarceration rates for different ethnic groups_. I calculated the **average incarceration rate for black and white** in Washington state in 2006, and the **average overall incarceration rate** across all ethnicities in the same state from 2006 to 2016. I chose to calculate these three variables because they can be used as supporting statistics for later analysis on the differences in jail admission rates in different racial groups. I also calculated **racial group with the highest population in jail** in 2016 Washington state and the **ethnic group with the highest incarceration rate**. These two variables can help to determine whether the _race with the highest jail population is the same as the race with the highest jail rate_.
+
+
+```{r, echo=FALSE,warning=FALSE, message=FALSE}
+source("../source/analysis.R")
+Line_graph
+```
+> This line graph shows the total number of people in jail by race, from 2006 to 2016. It is very clear that the number of people in jail who are white is _much higher_ than the rest ethnicities in the dataset. The following ethinic groups with high number of jail population is black and latinx. I included this graph to show the _distribution and fluctuations of jail population for different races_. In this graph, we can tell that the jail population for white has an overall trend of decreasing over the past 10 years while the jail population for other races fluctuated slightly but didn’t have any major changes. 
+
+```{r, echo=FALSE,warning=FALSE, message=FALSE}
+source("../source/analysis.R")
+comparison_graph
+```
+>This bar chart shows the comparison between average incarceration rates between _two different racial groups and the overall average rate_. I included this graph because the previous line graph shows that the white people occupy the highest jail population for all 10 years. However, that does not necessarily mean that they have the highest incarceration rate considering the population. The data used to calculate the incarceration rate here is collected for the year 2016. I focused on the data from this very recent yea particularly because I want to present to audiences with the updated situation of juridical treatment. People may think that the fairness of the juridical system has been improved greatly but from this graph we can tell that the _incarceration rate for black people is still significantly higher_ than the average rate for white and the average number for all races. In contrast, the rate of jail admission for white is even slightly lower than the average rate for all ethnicities. 
+
+```{r, echo=FALSE,warning=FALSE, message=FALSE}
+source("../source/analysis.R")
+jail_map
+```
+> This is a map of the _population distribution_ of the United States in the year 2016. I included this map because it can provide us an understanding of different population sizes in different states. I focused on data in Washington State in previous analysis and variables so I want to give audiences an idea of the _relative population size_ in Washington state. This can help audiences to decide whether the sample taken in Washington State will be too small to represent the whole country and whether Washington State can be a fair example to analyze. It can answer people’s doubts about whether Washington State is an extremely large or small sample. This will help to enhance the credibility of this analysis.From the map we can see that _Washington State does not have too small or too big population size_ in the country and can be a fair sample to analyze.
