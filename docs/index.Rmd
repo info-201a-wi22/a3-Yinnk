@@ -6,11 +6,15 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+```{r, echo=FALSE,warning=FALSE, message=FALSE}
+source("../source/analysis.R")
+
+```
 
 
 There are debates about race and policing in the U.S. which include questions about **equality and biases in jurisdictional processes**. This dataset contains incarceration information in the U.S. from 1970 to 2018 and has statistics by race that can be used to analyze the equality of jurisdictional treatment. I will focus on analyzing data from the _nearest 10 years, 2006 to 2016_, to see if the situation matches some people's perception that **equality has been achieved by changes over years**.
 
-For the five variables I calculated, I mainly focused on _comparing incarceration rates for different ethnic groups_. I calculated the **average incarceration rate for black and white** in Washington state in 2006, and the **average overall incarceration rate** across all ethnicities in the same state from 2006 to 2016. I chose to calculate these three variables because they can be used as supporting statistics for later analysis on the differences in jail admission rates in different racial groups. I also calculated **racial group with the highest population in jail** in 2016 Washington state and the **ethnic group with the highest incarceration rate**. These two variables can help to determine whether the _race with the highest jail population is the same as the race with the highest jail rate_.
+For the five variables I calculated, I mainly focused on _comparing incarceration rates for different ethnic groups_. I calculated the **average incarceration rate for black and white** in Washington state in 2006 as following: Jail rate for black is `r jail_rate_black`, Jail rate for white is `r jail_rate_white` and the **average overall incarceration rate** across all ethnicities in the same state from 2006 to 2016 which is `r jail_rate_all`. I chose to calculate these three variables because they can be used as supporting statistics for later analysis on the differences in jail admission rates in different racial groups. I also calculated **racial group with the highest population in jail** which is `r highest_jail_pop` in 2016 Washington state.From comparisom the **ethnic group with the highest incarceration rate** is `r highest_race`. These two variables can help to determine whether the _race with the highest jail population is the same as the race with the highest jail rate_.
 
 
 ```{r, echo=FALSE,warning=FALSE, message=FALSE}
